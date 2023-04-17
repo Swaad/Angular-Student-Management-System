@@ -8,7 +8,7 @@ const routes: Routes = [
     path:'student-details',
     component: StudentDetailsComponent,
     children:[
-   
+
     ]
   },
   {

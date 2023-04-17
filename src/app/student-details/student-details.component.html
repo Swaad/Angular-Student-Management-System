@@ -1,26 +1,33 @@
-<table>
-    <tr>
-      <th></th>
-      <th scope="col">Id</th>
-      <th scope="col">Name</th>
-    </tr>
-
-    <tr>
-
-      <!-- <td>{{item.id}}</td>
-      <td>{{item.name}}</td> -->
-
-    </tr>
 
 
-  </table>
-
-<table>
+<!-- <table class="styled-table">
     <ng-container *ngFor="let group of studentList">
-        <tr>
+        <tr class="active-row">
           <td><h2>{{group.id}}</h2></td>
           <td><h2>{{group.name}}</h2></td>
         </tr>
 
     </ng-container>
+</table> -->
+
+<table class="styled-table">
+  <thead>
+      <tr>
+          <th>ID</th>
+          <th>Name</th>
+      </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let group of studentList">
+      <tr class="active-row">
+        <td><h2>{{group.id}}</h2></td>
+        <td><h2>{{group.name}}</h2></td>
+      </tr>
+
+    </ng-container>
+
+      <!-- and so on... -->
+  </tbody>
 </table>
+
+
