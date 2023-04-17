@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+    <input matInput placeholder="id" formControlName="id">
+    <br>
+    <input matInput placeholder="name" formControlName="name">
+    <br>
+
+    <button mat-raised-button >add</button>
+</form>

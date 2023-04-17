@@ -1,0 +1,26 @@
+<table>
+    <tr>
+      <th></th>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+    </tr>
+
+    <tr>
+
+      <!-- <td>{{item.id}}</td>
+      <td>{{item.name}}</td> -->
+
+    </tr>
+
+
+  </table>
+
+<table>
+    <ng-container *ngFor="let group of studentList">
+        <tr>
+          <td><h2>{{group.id}}</h2></td>
+          <td><h2>{{group.name}}</h2></td>
+        </tr>
+
+    </ng-container>
+</table>
