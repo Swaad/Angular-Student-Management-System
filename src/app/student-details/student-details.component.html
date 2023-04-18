@@ -1,5 +1,3 @@
-
-
 <!-- <table class="styled-table">
     <ng-container *ngFor="let group of studentList">
         <tr class="active-row">
@@ -10,24 +8,34 @@
     </ng-container>
 </table> -->
 
+<h2>Student Details Page</h2>
+
 <table class="styled-table">
   <thead>
-      <tr>
-          <th>ID</th>
-          <th>Name</th>
-      </tr>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>action</th>
+    </tr>
   </thead>
   <tbody>
     <ng-container *ngFor="let group of studentList">
       <tr class="active-row">
-        <td><h2>{{group.id}}</h2></td>
-        <td><h2>{{group.name}}</h2></td>
-      </tr>
+        <td>
+          <h2>{{ group.id }}</h2>
+        </td>
+        <td>
+          <h2>{{ group.name }}</h2>
+        </td>
 
+        <td>
+          <button (click)="deleteStudent(group.id)">delete</button>&nbsp;
+          <!-- <button (click)="getStudentInfoById(group.id)">view</button>&nbsp; -->
+          <button (click)="updateStudent(group.id)" >update</button>
+        </td>
+      </tr>
     </ng-container>
 
-      <!-- and so on... -->
+    <!-- and so on... -->
   </tbody>
 </table>
-
-

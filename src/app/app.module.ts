@@ -48,13 +48,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StudentFormUpdateComponent } from './student-form-update/student-form-update.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentDetailsComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    StudentFormUpdateComponent
   ],
   imports: [
     BrowserModule,

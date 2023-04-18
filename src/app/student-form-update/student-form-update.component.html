@@ -1,0 +1,11 @@
+
+<h2>Student Form Page</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+    <input matInput placeholder="id" formControlName="id">
+    <br>
+    <input matInput placeholder="name" formControlName="name">
+    <br>
+
+    <button mat-raised-button >update</button>
+</form>

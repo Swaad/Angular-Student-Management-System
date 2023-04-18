@@ -12,10 +12,6 @@ export class StudentService {
 
   constructor(private myHttp: HttpClient) { }
   BaseUrl = environment.apiUrl;
-  studentGetApiURL: 'http://localhost:5009/api/Test/get-all-student-info';
-  studentPostApiURL: 'http://localhost:5009/api/Test/Add-TestInfo';
-  studentPutApiURL: 'http://localhost:5009/api/Test/update';
-  studentDeleteApiURL: 'http://localhost:5009/api/Test/delete/{id}';
 
   listStudent: Student[] = []; // for getting data student list
 
@@ -29,15 +25,17 @@ export class StudentService {
       catchError((error) => of({}))
     );
   }
-  updateStudent(){
-    return this.myHttp.put(`${this.studentPutApiURL}/${this.studentData.id}`,this.studentData);
+  updateStudent(body: any){
+    return this.myHttp.put(`${this.BaseUrl}/Test/update/`,body);
   }
   getStudentInfo(): Observable<Student[]>{
     return this.myHttp.get<Student[]>(`${this.BaseUrl}/Test/get-all-student-info`);
   }
-
+  getStudentInfoById(id: string): Observable<Student[]>{
+    return this.myHttp.get<Student[]>(`${this.BaseUrl}/Test/get-all-student-info/${id}`);
+  }
   deleteStudent(id:number){
-    return this.myHttp.delete(`${this.studentPutApiURL}/${id}`)
+    return this.myHttp.delete(`${this.BaseUrl}/Test/delete/${id}`)
   }
 
 }
